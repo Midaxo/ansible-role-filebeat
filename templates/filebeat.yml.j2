@@ -103,7 +103,7 @@ output:
     # Optional index name. The default index name depends on the each beat.
     # For Packetbeat, the default is set to packetbeat, for Topbeat
     # top topbeat and for Filebeat to filebeat.
-    #index: filebeat
+    index: {{filebeat_logstash_output_index}}
 
 {% if filebeat_ssl_certificate_file and filebeat_ssl_key_file %}
     # Optional TLS. By default is off.
