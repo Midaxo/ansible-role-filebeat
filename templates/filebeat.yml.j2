@@ -23,7 +23,7 @@ output:
 
     # Optional index name. The default is "filebeat" and generates
     # [filebeat-]YYYY.MM.DD keys.
-    #index: "filebeat"
+    index: {{filebeat_logstash_output_index}}
 
     # Optional HTTP Path
     #path: "/elasticsearch"
