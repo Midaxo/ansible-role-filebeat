@@ -1,6 +1,9 @@
-filebeat:
-  # List of prospectors to fetch data.
-  prospectors:
+# List of inputs to fetch data.
+{% if filebeat_inputs_flag is defined %}
+filebeat.inputs:
+{% else %}
+filebeat.prospectors:
+{% endif %}
     {{ filebeat_prospectors | to_json }}
 
 # Configure what outputs to use when sending the data collected by the beat.
